@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(
+    to bottom,
+    rgb(33, 1, 39) 0%,
+    rgb(0, 0, 0) 70%,
+    rgb(60, 3, 3) 100%
+  );
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}

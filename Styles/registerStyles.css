@@ -1,0 +1,73 @@
+.nav {
+  height: 50px;
+  background: rgba(8, 42, 123, 0.695);
+}
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.register {
+  color: white;
+  max-width: 90%;
+  width: 30rem;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 0.625rem;
+}
+.register input {
+  border: none;
+  border-bottom: 1px solid white;
+  background: transparent;
+  color: white;
+  margin: 0.5rem 0;
+  width: 80%;
+}
+.register select {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.register select option {
+  color: black;
+}
+.dateFlex {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.dateFlex input {
+  width: 3rem;
+}
+#submitRegister {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgba(8, 42, 123, 0.8);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#submitRegister:hover {
+  background: rgba(8, 42, 123, 1);
+}
+.register input:hover,
+.register input:focus {
+  border: 1px solid white;
+  outline: none;
+  transition: 0.3s;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
