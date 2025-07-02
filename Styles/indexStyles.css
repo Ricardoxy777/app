@@ -1,53 +1,98 @@
-.login-box{
-    color: white;
-    max-width: 90%;
-    width: 30rem;
-    height: auto;
-    background: rgba(0, 0, 0, 0.7);
-    top: 50%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    padding: 2rem;
-    border-radius: 10px;
+.login-box {
+  color: white;
+  max-width: 90%;
+  width: 30rem;
+  background: rgba(0, 0, 0, 0.7);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: 10px;
 }
-.login-box a{
-    color: darkgray;
-    display: block;
+.login-box h1 {
+  font-size: 2rem;
+  margin: 0;
+  padding-bottom: 20px;
+  text-align: center;
 }
-.login-box label{
-    font-size: 18px;
-    color: white;
-    margin: 0;
-    padding: 0;
-    display: block;
-}
-.login-box h1{
-    font-size: 2rem;
-    margin: 0;
-    padding-bottom: 20px;
-    text-align: center;
-}
-.login-box input{
-    width: 100%;
-    margin-bottom: 20px;
-    color:white;
+.group {
+  position: relative;
+  margin-bottom: 35px;
 }
 .login-box input[type="text"],
-.login-box input[type="password"]{
-    border: none;
-    border-bottom: 1px solid white;
-    background: transparent;
+.login-box input[type="password"] {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #757575;
+  background: transparent;
+  color: white;
 }
-.login-box input[type="text"]:hover,
-.login-box input[type="text"]:focus,
-.login-box input[type="password"]:hover,
-.login-box input[type="password"]:focus {
-  border: 1px solid white;
-  transition: 0.2s;
+.login-box input:focus {
+  outline: none;
+}
+.login-box label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+}
+.login-box input:focus ~ label,
+.login-box input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #5264AE;
+}
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.bar:before,
+.bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  transition: 0.2s ease all;
+}
+.bar:before {
+  left: 50%;
+}
+.bar:after {
+  right: 50%;
+}
+.login-box input:focus ~ .bar:before,
+.login-box input:focus ~ .bar:after {
+  width: 50%;
+}
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.login-box input:focus ~ .highlight {
+  animation: inputHighlighter 0.3s ease;
+}
+@keyframes inputHighlighter {
+  from { background: #5264AE; }
+  to   { width: 0; background: transparent; }
 }
 .ingresar {
-  padding: 10px 20px;           
+  padding: 10px 20px;
   border: none;
   border-radius: 50px;
   background-color: rgb(242, 238, 238);
@@ -55,19 +100,25 @@
   font-weight: bold;
   cursor: pointer;
   transition: all 0.4s ease;
-  box-shadow: 0 0 0 transparent;
+  width: 100%;
 }
 .ingresar:hover {
   background-color: #daf4f5;
-  transform: scale(1.05);       
+  transform: scale(1.05);
 }
 .ingresar:active {
   transform: scale(0.98);
 }
-.login-box a:hover{
-    transform: scale(1.05);
-    transition: 0.3s;
-    color: rgb(83, 82, 82);
-    transform-origin: center;
+.login-box a {
+  color: darkgray;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
 }
-
+.login-box a:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  color: rgb(83, 82, 82);
+  transform-origin: center;
+}
