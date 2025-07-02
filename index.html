@@ -8,28 +8,30 @@
   <title>Ingreso</title>
 </head>
 <body>
-  <nav class="nav">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </nav>
-  
+    
     <div class="login-box">
 
-        <form id="loginForm">
-        <h1>Ingresar</h1>
-        <label for="userName">Usuario</label>
-        <input type="text" id="userName" placeholder="Enter Username" required>
-        <br>
-        <label for="password">Contraseña</label>
-        <input type="password" id="password" placeholder="Enter password">
-        <br>
+<form id="loginForm">
+  <h1>Ingresar</h1>
+
+  <div class="group">
+    <input type="text" id="userName" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label for="userName">Usuario</label>
+  </div>
+
+  <div class="group">
+    <input type="password" id="password" required>
+    <span class="highlight"></span>
+    <span class="bar"></span>
+    <label for="password">Contraseña</label>
+  </div>
         <input type="submit" id="ingresar" value="Ingresar" class="ingresar">
         <br>
         <a href="#" class="lostPass">¿Perdiste tu contraseña?</a><br>
         <a href="/registro.html" class="register">Registrarse</a>
-        </form>
+</form>
     </div>
 
 <script src="/main/main.js"></script>
